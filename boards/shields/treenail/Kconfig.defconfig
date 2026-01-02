@@ -1,0 +1,6 @@
+if SHIELD_TREENAIL
+
+config ZMK_KEYBOARD_NAME
+    default "treenail"
+
+endif # SHIELD_TREENAIL
