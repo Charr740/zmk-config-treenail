@@ -22,15 +22,31 @@
         };
     };
 
+    behaviors {
+        queston_tap: queston_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QUESTON_TAP";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp LS(SLASH)>, <&kp RIGHT_SHIFT>;
+        };
+
+        LAYER_TOGGLES: LAYER_TOGGLES {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_TOGGLES";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&tog 1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer_1 {
             bindings = <
-&kp ESCAPE  &kp Q     &kp W     &kp E  &kp R  &kp T  &kp Y      &kp U      &kp I      &kp O     &kp P     &kp BSPC
-&kp TAB     &kp A     &kp S     &kp D  &kp F  &kp G  &kp H      &kp J      &kp K      &kp L     &kp SQT   &kp RET
-&kp LSHFT   &kp Z     &kp X     &kp C  &kp V  &kp B  &kp N      &kp M      &kp COMMA  &kp DOT   &kp UP    &mt LS(FSLH) SLASH
-&kp LCTRL   &kp LALT  &kp LGUI  &mo 1  &mo 2  &mo 3  &kp SPACE  &kp SPACE  &kp SPACE  &kp LEFT  &kp DOWN  &kp RIGHT
+&kp ESCAPE  &kp Q     &kp W     &kp E           &kp R  &kp T  &kp Y      &kp U      &kp I      &kp O     &kp P     &kp BSPC
+&kp TAB     &kp A     &kp S     &kp D           &kp F  &kp G  &kp H      &kp J      &kp K      &kp L     &kp SQT   &kp RET
+&kp LSHFT   &kp Z     &kp X     &kp C           &kp V  &kp B  &kp N      &kp M      &kp COMMA  &kp DOT   &kp UP    &queston_tap
+&kp LCTRL   &kp LALT  &kp LGUI  &LAYER_TOGGLES  &mo 2  &mo 3  &kp SPACE  &kp SPACE  &kp SPACE  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
         };
 
@@ -62,3 +78,4 @@
         };
     };
 };
+
