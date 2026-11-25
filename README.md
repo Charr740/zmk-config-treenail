@@ -6,7 +6,7 @@ The system files were configured for a rasberi Pi Pico MCU board, with a 4x10 di
 
 Configuration files and keymap for my custom hand-wired 40% (10x4 matrix) mechanical keyboard powered by a Raspberry Pi Pico (RP2040) and running [ZMK Firmware](https://zmk.dev/).
 
-![Keyboard Photo](Images/Image1.jpg)
+![Keyboard Photo](Images/Image3.jpg)
 
 ## Overview
 This project was built to learn the end-to-end process of designing, wiring, and bringing up a custom microcontroller-based peripheral. Rather than writing firmware from scratch, I integrated the open-source ZMK framework by defining custom hardware pinouts and matrix configurations for my specific build.
@@ -24,6 +24,6 @@ This project was built to learn the end-to-end process of designing, wiring, and
 * **Build Pipeline:** Used GitHub Actions to automatically compile the `.uf2` firmware binary on push for flashing via the nRF52840 usb bootloader.
 
 ## Build Gallery
-| Finished Build | Matrix Wiring |
-| :---: | :---: |
-| ![Finished](Images/Image1.jpg) | ![Wiring](Images/Image2.jpg) |
+| Finished Build | Matrix Wiring | Keyboard Without case |
+| :---: | :---: | :---: |
+| ![Finished](Images/Image3.jpg) | ![Wiring](Images/Image1.jpg) | ![Plate](Images/Image2.jpg) |
